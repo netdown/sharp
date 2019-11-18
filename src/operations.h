@@ -20,7 +20,6 @@
 #include <memory>
 #include <tuple>
 #include <vips/vips8>
-#include <variant>
 
 using vips::VImage;
 
