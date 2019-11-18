@@ -20,6 +20,7 @@
 #include <memory>
 #include <tuple>
 #include <vips/vips8>
+#include <variant>
 
 using vips::VImage;
 
@@ -89,7 +90,7 @@ namespace sharp {
   /*
    * Linear adjustment (a * in + b)
    */
-  VImage Linear(VImage image, const a, const b);
+  VImage Linear(VImage image, std::variant<int, int[]> const a, std::variant<int, int[]> const b);
 
   /*
    * Recomb with a Matrix of the given bands/channel size.
