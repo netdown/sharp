@@ -302,7 +302,7 @@ namespace sharp {
    /*
    * Calculate (a * in + b)
    */
-  VImage Linear(VImage image, int const a[], int const b[]) {
+  VImage Linear(VImage image, std::vector<double> a, std::vector<double> b) {
     if (HasAlpha(image)) {
       // Separate alpha channel
       VImage alpha = image[image.bands() - 1];
