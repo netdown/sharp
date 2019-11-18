@@ -89,7 +89,7 @@ namespace sharp {
   /*
    * Linear adjustment (a * in + b)
    */
-  VImage Linear(VImage image, double const a, double const b);
+  VImage Linear(VImage image, const a, const b);
 
   /*
    * Recomb with a Matrix of the given bands/channel size.
