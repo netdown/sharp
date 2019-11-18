@@ -19,6 +19,7 @@
 #include <vector>
 
 #include <vips/vips8>
+#include <variant>
 
 #include "common.h"
 #include "operations.h"
@@ -289,7 +290,7 @@ namespace sharp {
   /*
    * Calculate (a * in + b)
    */
-  VImage Linear(VImage image, const a, const b) {
+  VImage Linear(VImage image, std::variant<int, int[]> const a, std::variant<int, int[]> const b) {
     if (HasAlpha(image)) {
       // Separate alpha channel
       VImage alpha = image[image.bands() - 1];
